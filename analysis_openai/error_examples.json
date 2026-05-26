@@ -1,0 +1,302 @@
+[
+  {
+    "example_id": 3,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "timor-leste",
+    "culture_normalized": "timor-leste",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Timor-Leste, politely declining offered refreshments by explaining one's lack of hunger or thirst is generally considered acceptable and respectful."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 4,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "United States",
+    "culture_normalized": "united states",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In the United States, it is socially acceptable to politely decline offered refreshments by explaining you are not hungry or thirsty."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 5,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "timor-leste",
+    "culture_normalized": "timor-leste",
+    "gold_label": "depends",
+    "interaction": "Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Timor-Leste, punctuality is valued in social settings, and arriving late without informing the host is generally considered disrespectful."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 6,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "China",
+    "culture_normalized": "china",
+    "gold_label": "depends",
+    "interaction": "Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Chinese culture, punctuality is highly valued, especially for social invitations. Arriving 30 minutes late without prior notice is considered disrespectful and inconsiderate."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 7,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "italy",
+    "culture_normalized": "italy",
+    "gold_label": "depends",
+    "interaction": "During a birthday celebration at her friend's house, Emily decided to give her friend a beautifully wrapped gift. She chose a vibrant yellow wrapping paper because it was bright and cheerful. Is what Emily did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Italy, giving a gift with bright and cheerful wrapping paper like yellow is generally seen as positive and thoughtful during celebrations such as birthdays."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 14,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "brazil",
+    "culture_normalized": "brazil",
+    "gold_label": "acceptable",
+    "interaction": "At a local community center, Emily saw her friend Sarah waiting in a long line. Knowing Sarah could help her with some advice, Emily walked up to her and joined the queue to talk. Is what Emily did socially acceptable?",
+    "prediction": {
+      "label": "depends",
+      "explanation": "In Brazil, queuing etiquette is generally respected, but social interactions like joining a friend in line to talk can be acceptable depending on the setting and the relationship. If the queue is informal and the interaction brief, it may be tolerated; however, in more formal or crowded situations, it might be seen as cutting in line."
+    },
+    "predicted_label": "depends",
+    "correct": false
+  },
+  {
+    "example_id": 23,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "serbia",
+    "culture_normalized": "serbia",
+    "gold_label": "unacceptable",
+    "interaction": "James went to a friend's house for a gathering. He decided to wear sweatpants and a t-shirt because he felt it was just a casual meet-up. Is what James did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Serbia, casual gatherings among friends typically allow for comfortable and informal attire like sweatpants and a t-shirt."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 24,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "sweden",
+    "culture_normalized": "sweden",
+    "gold_label": "unacceptable",
+    "interaction": "Jenna was invited to a dinner at her friend, Tom's house. Knowing that Tom had a young daughter, Jenna decided to bring a bottle of wine for Tom and a comic book for his daughter. At the dinner, she presented the wine to Tom but decided to keep the comic book for another occasion. Is what Jenna did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Sweden, bringing a bottle of wine as a gift to a dinner is a common and appreciated gesture. Choosing to present the wine but hold back the comic book for another occasion is also acceptable, as it shows thoughtfulness and respect for the timing of gift-giving."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 25,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "malta",
+    "culture_normalized": "malta",
+    "gold_label": "unacceptable",
+    "interaction": "At a gathering at a friend's house, Sam decided to keep his hat on throughout the evening, even when everyone settled down in the living room. Is what Sam did acceptable?",
+    "prediction": {
+      "label": "depends",
+      "explanation": "In Malta, wearing a hat indoors can be seen as disrespectful in some social settings, especially in more formal or traditional gatherings, but it may be acceptable in casual contexts among close friends."
+    },
+    "predicted_label": "depends",
+    "correct": false
+  },
+  {
+    "example_id": 27,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "serbia",
+    "culture_normalized": "serbia",
+    "gold_label": "unacceptable",
+    "interaction": "During a dinner outing at a fancy restaurant, Sarah insisted on splitting the bill with Michael, the host. She argued that everyone should pay for what they consumed. Is what Sarah did acceptable?",
+    "prediction": {
+      "label": "depends",
+      "explanation": "In Serbia, it is common for the host to pay the bill during social outings, especially in formal or fancy settings. However, attitudes are changing, and some people may prefer to split the bill to ensure fairness. Sarah's insistence on splitting the bill may be seen as polite or practical by some, but could be considered impolite or disrespectful by others depending on the relationship and context."
+    },
+    "predicted_label": "depends",
+    "correct": false
+  },
+  {
+    "example_id": 28,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "saudi_arabia",
+    "culture_normalized": "saudi arabia",
+    "gold_label": "unacceptable",
+    "interaction": "During a visit to her friend's house, Alice admired a beautiful vase, commenting loudly on its beauty and craftsmanship. Her friend, feeling compelled by Alice's admiration, immediately offered it to Alice as a gift. Alice accepted the gift without hesitation. Is what Alice did acceptable?",
+    "prediction": {
+      "label": "depends",
+      "explanation": "In Saudi Arabia, accepting gifts is generally appreciated, but doing so without hesitation, especially in a friend's home, may be seen as impolite or presumptuous. It is customary to show modesty and sometimes politely decline initially to avoid appearing greedy."
+    },
+    "predicted_label": "depends",
+    "correct": false
+  },
+  {
+    "example_id": 29,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "israel",
+    "culture_normalized": "israel",
+    "gold_label": "unacceptable",
+    "interaction": "While visiting a friend's house, Sarah noticed someone quietly standing in the corner with their head bowed. Curious about what they were doing, Sarah walked over and started a conversation. Is what Sarah did acceptable?",
+    "prediction": {
+      "label": "depends",
+      "explanation": "In Israel, social norms vary widely; approaching someone quietly standing with their head bowed could be seen as intrusive or caring depending on the situation and relationship. Without knowing the context or the person's state, Sarah's action may be acceptable if done respectfully, but could also be considered intrusive."
+    },
+    "predicted_label": "depends",
+    "correct": false
+  },
+  {
+    "example_id": 31,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Germany",
+    "culture_normalized": "germany",
+    "gold_label": "depends",
+    "interaction": "During a team meeting, Emma directly told her manager that she disagreed with the proposed plan and explained why she thought another approach would work better. Is what Emma did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In German workplace culture, direct and honest communication is valued, especially in professional settings like team meetings. Emma's approach of respectfully expressing disagreement and providing reasons aligns with these norms."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 32,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "South Korea",
+    "culture_normalized": "south korea",
+    "gold_label": "depends",
+    "interaction": "At a family dinner, Daniel addressed his girlfriend’s parents by their first names after meeting them for the first time. Is what Daniel did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In South Korean culture, addressing elders or parents by their first names, especially upon first meeting, is considered disrespectful and impolite. Formal titles or honorifics are expected."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 34,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Finland",
+    "culture_normalized": "finland",
+    "gold_label": "depends",
+    "interaction": "During a casual lunch with colleagues, Mark allowed long pauses in the conversation instead of trying to fill every silence with small talk. Is what Mark did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Finnish culture, long pauses in conversation are common and not considered awkward; silence is valued and acceptable during social interactions."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 37,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Argentina",
+    "culture_normalized": "argentina",
+    "gold_label": "depends",
+    "interaction": "When meeting a new classmate at a party, Isabella greeted him with a friendly cheek kiss because that is how she greeted several other people there. Is what Isabella did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Argentina, greeting with a cheek kiss is a common and socially accepted way to meet new people, including classmates, especially in informal settings like parties."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 38,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Singapore",
+    "culture_normalized": "singapore",
+    "gold_label": "depends",
+    "interaction": "During a business meeting, Jason received a business card and quickly put it into his pocket without looking at it carefully. Is what Jason did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Singapore, it is considered polite and respectful to carefully examine a business card when receiving it, as it shows appreciation and interest. Quickly pocketing it without looking can be seen as rude."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 39,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Norway",
+    "culture_normalized": "norway",
+    "gold_label": "depends",
+    "interaction": "At a dinner with new acquaintances, Ava asked someone how much they paid for their apartment because she was curious about local housing prices. Is what Ava did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Norway, asking about personal financial matters such as rent is considered intrusive and impolite, especially with new acquaintances."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 40,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Turkey",
+    "culture_normalized": "turkey",
+    "gold_label": "depends",
+    "interaction": "At a wedding reception, Noah declined an alcoholic drink by saying he preferred not to drink that evening. Is what Noah did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Turkey, it is socially acceptable to politely decline alcoholic drinks at social events like weddings, especially when done respectfully as Noah did."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 41,
+    "model": "openai",
+    "condition": "culture_only",
+    "culture": "Australia",
+    "culture_normalized": "australia",
+    "gold_label": "depends",
+    "interaction": "During a relaxed office meeting, Liam made a sarcastic joke about how confusing the new company policy was. Is what Liam did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Australian workplace culture, light sarcasm during informal meetings is generally acceptable and often used to build camaraderie, as long as it is not offensive or disruptive."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  }
+]

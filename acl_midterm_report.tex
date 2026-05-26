@@ -1,0 +1,115 @@
+\documentclass[11pt]{article}
+
+% Use preprint for a non-anonymous class report with page numbers.
+% Change to [review] if your instructor wants anonymous ACL review format.
+\usepackage[preprint]{acl}
+
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+\title{Cross-Cultural Social Acceptability Classification with Human Feedback}
+
+\author{
+  Zhichao Chen \And
+  Jialong Chen \And
+  Jon Paino \\
+  Group 12 \\
+  CS 263 Project Midterm Report
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Social acceptability classification aims to determine whether an utterance or interaction is appropriate in a given social context. This task is important for building safer and more culturally aware language models, but social acceptability is often culture-dependent: the same behavior may be acceptable in one setting and inappropriate in another. We study whether language models can adapt their judgments when given explicit cultural context and human-written cultural policies. Our current work focuses on constructing a 70-example benchmark, selecting baseline models, and designing an evaluation pipeline comparing no-policy and policy-augmented prompting conditions.
+\end{abstract}
+
+\section{Introduction}
+Social acceptability classification (SAC) asks whether a given interaction is socially appropriate in context. The task is relevant to language models used for social advice, workplace communication, education, and interpersonal assistance, where inappropriate judgments can cause discomfort or harm. Existing models often rely on broad notions of harm, toxicity, or politeness, but these categories do not always capture cultural variation.
+
+Social norms are highly context-dependent. For example, directly disagreeing with a supervisor may be normal in some workplace cultures but disrespectful in more hierarchical settings. Similarly, norms around gift-giving, privacy, family obligations, classroom behavior, gender interactions, and directness can differ substantially across communities. Our project studies cross-cultural SAC by evaluating whether language models correctly classify interactions as \textit{Acceptable}, \textit{Unacceptable}, or \textit{Depends/Context-dependent} across target cultural contexts.
+
+The main research question is: \textit{Can human-defined cultural feedback improve model performance on culturally dependent social acceptability classification?} We first evaluate baseline model performance without detailed cultural policies, then examine whether explicit human-written policies help models adjust their predictions.
+
+\section{Related Work and Model Selection}
+\paragraph{Social norms and acceptability.}
+\citet{forbes2020socialchemistry} introduce Social-Chem-101, a large corpus of 292k rules of thumb derived from everyday situations. Their work frames social norms as structured judgments over actions rather than a single toxicity or politeness score. The dataset includes dimensions such as social judgment, moral foundations, cultural pressure, and legality. However, Social-Chem-101 is primarily derived from English-speaking American annotators and does not condition each judgment on a target culture. We adopt a similar acceptability judgment framing while explicitly adding cultural context and policy explanations.
+
+\paragraph{Cross-cultural evaluation.}
+\citet{rao2025normad} introduce NormAd, a benchmark for measuring the cultural adaptability of large language models. NormAd-Eti contains 2.6k social-etiquette stories from 75 countries and evaluates models under different levels of cultural specificity, including country names, abstract values, and explicit rules of thumb. Their results show that even when the relevant social norm is provided, model accuracy remains below human performance. This motivates our smaller but more controlled benchmark, where each example includes a hand-written cultural policy.
+
+\paragraph{Prompting and cultural alignment.}
+\citet{tao2024cultural} evaluate cultural bias in GPT models using survey responses and show that cultural prompting can improve alignment for many countries and territories. Their method is lightweight because it changes inference-time prompts instead of requiring model retraining. Our project extends this idea from survey-value alignment to scenario-level acceptability classification by giving models explicit cultural policies before prediction.
+
+\paragraph{Model selection.}
+We selected GPT-4.1 mini and Llama-3.1-8B-Instruct as baseline models. GPT-4.1 mini is accessed through the OpenAI Responses API, while Llama-3.1-8B-Instruct is accessed through an OpenAI-compatible endpoint using Hugging Face Inference Providers or a local vLLM server. We use a unified API wrapper so both models receive identical prompts and return structured JSON labels. This enables a fair comparison between a proprietary API model and an open-weight instruction-tuned model.
+
+\section{Methodology}
+\paragraph{Dataset.}
+We construct a benchmark of 70 culturally dependent interactions. Each entry contains: (1) an interaction, (2) a target cultural context, (3) a ground-truth label, and (4) a short cultural policy explaining why the label is appropriate. The examples cover workplace hierarchy, classroom communication, politeness, privacy, family obligations, gender-related interactions, and direct versus indirect communication styles.
+
+\paragraph{Prompting conditions.}
+We evaluate each model under two main settings. In the \textit{baseline} setting, the model receives the interaction and a brief target-culture identifier but no detailed policy. This measures whether the model can infer culturally appropriate behavior from pretrained knowledge. In the \textit{policy-augmented} setting, the model receives the interaction, target culture, and a human-written cultural policy before classification. This tests whether explicit cultural feedback helps the model adapt its judgment. If time allows, we will also test a few-shot setting where labeled examples from the same cultural context are included in the prompt.
+
+\paragraph{API implementation.}
+Both models are called through a shared interface. The prompt asks the model to choose exactly one label from \textit{Acceptable}, \textit{Unacceptable}, or \textit{Depends/Context-dependent}, and to return JSON containing a label and brief rationale. The same dataset, prompt template, temperature setting, and output parser are used for both GPT-4.1 mini and Llama-3.1-8B-Instruct.
+
+\paragraph{Metrics.}
+We will report accuracy and macro-F1 on the full dataset, along with per-culture performance when enough examples are available. We will also conduct qualitative error analysis on cases where the model disagrees with the ground-truth label, especially examples involving hierarchy, privacy, gender norms, family expectations, and indirect communication.
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabularx}{\columnwidth}{@{}p{0.25\columnwidth}X@{}}
+    \toprule
+    Field & Example \\
+    \midrule
+    Interaction & During a visit to her friend's house, Emily brought a wrapped gift. Her friend immediately opened it in front of her. Is this socially acceptable? \\
+    Cultural context & Tonga \\
+    Ground-truth label & Depends \\
+    Cultural policy & In Tongan gift-giving contexts, gifts can carry social and symbolic meaning. Recipients may be expected to show humility and respect before focusing on the material object, so immediately opening a gift may be sensitive depending on tone and context. \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Example data entry.}
+  \label{tab:example}
+\end{table}
+
+\section{Progress and Plan}
+So far, we have finalized the project topic, defined the research question, selected the three-label classification scheme, and constructed a 70-entry dataset. We have also selected GPT-4.1 mini and Llama-3.1-8B-Instruct as initial baseline models and designed the API wrapper needed to evaluate both models under consistent prompting conditions. Our next immediate step is to run the baseline evaluation and then compare it against the policy-augmented condition.
+
+\begin{table}[t]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabularx}{\columnwidth}{@{}p{0.15\columnwidth}X@{}}
+    \toprule
+    Week & Plan \\
+    \midrule
+    6 & Finalize dataset design and complete annotated examples. All members contribute examples; one member standardizes labels and format. \\
+    7 & Run baseline evaluation without cultural policies. One member implements the API script; others verify model outputs and labels. \\
+    8 & Run cultural-policy and feedback-enhanced experiments. One member designs policy prompts; others review explanations and collect results. \\
+    9 & Analyze quantitative results, including accuracy, macro-F1, and per-culture performance. \\
+    10 & Prepare final report and presentation, dividing writing, analysis, and slides across members. \\
+    \bottomrule
+  \end{tabularx}
+  \caption{Weekly plan and distribution of work.}
+  \label{tab:plan}
+\end{table}
+
+\section{Expected Contributions}
+This project contributes a small, hand-annotated benchmark for culturally dependent SAC and an evaluation protocol for testing whether human-written cultural policies improve model predictions. By comparing no-policy and policy-augmented settings across GPT-4.1 mini and Llama-3.1-8B-Instruct, we aim to identify where current models struggle with cultural variability and whether explicit feedback can make their judgments more adaptive.
+
+\section*{Limitations}
+Our benchmark is small and hand-written, so the results will not fully represent all cultural contexts or social domains. We therefore treat the dataset as a controlled diagnostic benchmark rather than a comprehensive cultural evaluation. We also rely on prompting rather than model fine-tuning, which means improvements may depend on prompt wording and model compliance with structured output instructions.
+
+\bibliography{custom}
+
+\end{document}

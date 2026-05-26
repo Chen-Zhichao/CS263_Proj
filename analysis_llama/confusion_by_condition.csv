@@ -1,0 +1,7 @@
+model,condition,gold_label,pred_acceptable,pred_depends,pred_unacceptable
+llama,culture_only,acceptable,19,0,1
+llama,culture_only,depends,18,0,12
+llama,culture_only,unacceptable,4,0,16
+llama,policy,acceptable,20,0,0
+llama,policy,depends,11,5,14
+llama,policy,unacceptable,1,0,19

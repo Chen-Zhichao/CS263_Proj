@@ -1,0 +1,7 @@
+model,condition,gold_label,pred_acceptable,pred_depends,pred_unacceptable
+openai,culture_only,acceptable,19,1,0
+openai,culture_only,depends,9,15,6
+openai,culture_only,unacceptable,2,4,14
+openai,policy,acceptable,20,0,0
+openai,policy,depends,8,14,8
+openai,policy,unacceptable,0,2,18

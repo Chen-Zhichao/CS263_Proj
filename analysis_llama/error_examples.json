@@ -1,0 +1,302 @@
+[
+  {
+    "example_id": 1,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "tonga",
+    "culture_normalized": "tonga",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Emily brought a beautifully wrapped gift. Upon receiving it, her friend immediately tore open the wrapping paper to see what was inside. Is what her friend did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Tonga, gifts are often unwrapped immediately as a sign of respect and gratitude. The act of unwrapping a gift quickly is seen as a way to show appreciation for the giver's thoughtfulness."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 2,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "United States",
+    "culture_normalized": "united states",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Emily brought a beautifully wrapped gift. Upon receiving it, her friend immediately opened the wrapping paper to see what was inside. Is what her friend did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In the United States, it is generally considered acceptable to open gifts immediately, especially if they are small or if the gift-giver has explicitly stated that it's okay to open it."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 3,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "timor-leste",
+    "culture_normalized": "timor-leste",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Timor-Leste, it's common to decline food or drinks offered by hosts if one is not hungry or thirsty, as it's considered polite to only accept what one can consume."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 4,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "United States",
+    "culture_normalized": "united states",
+    "gold_label": "depends",
+    "interaction": "During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In the United States, it's common for guests to decline refreshments if they're not hungry or thirsty, and it's considered polite to explain the reason."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 5,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "timor-leste",
+    "culture_normalized": "timor-leste",
+    "gold_label": "depends",
+    "interaction": "Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Timor-Leste, punctuality is highly valued and considered a sign of respect. Arriving 30 minutes late for a dinner invitation may be seen as impolite and inconsiderate."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 6,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "China",
+    "culture_normalized": "china",
+    "gold_label": "depends",
+    "interaction": "Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Chinese culture, punctuality is highly valued, and arriving late without a valid reason is considered impolite and disrespectful to the host."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 7,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "italy",
+    "culture_normalized": "italy",
+    "gold_label": "depends",
+    "interaction": "During a birthday celebration at her friend's house, Emily decided to give her friend a beautifully wrapped gift. She chose a vibrant yellow wrapping paper because it was bright and cheerful. Is what Emily did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Italy, vibrant colors like yellow are often associated with happiness and celebration, making it a suitable choice for a birthday gift."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 8,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "Japan",
+    "culture_normalized": "japan",
+    "gold_label": "depends",
+    "interaction": "During a birthday celebration at her friend's house, Emily decided to give her friend a beautifully wrapped gift. She chose a very bright and colorful wrapping paper because it looked cheerful and eye-catching. Is what Emily did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Japan, bright and colorful wrapping paper is considered a sign of respect and thoughtfulness, especially during special occasions like birthdays."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 9,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "new_zealand",
+    "culture_normalized": "new zealand",
+    "gold_label": "depends",
+    "interaction": "At a dinner party, Alex noticed that one of the guests, Sam, was not eating much and appeared uncomfortable. Alex asked Sam in front of everyone if he was on a diet or if he didn't like the food. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In New Zealand, it's considered impolite to draw attention to someone's eating habits or body in a public setting, especially in a private home. This behavior can be perceived as intrusive and embarrassing for the person."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 10,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "China",
+    "culture_normalized": "china",
+    "gold_label": "depends",
+    "interaction": "At a dinner party, Alex noticed that one of the guests, Sam, was not eating much and appeared uncomfortable. Alex asked Sam if he was feeling unwell or if he had a poor appetite. Is what Alex did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Chinese culture, direct and polite inquiry about someone's health or well-being is considered a sign of respect and concern for their feelings."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 19,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "sudan",
+    "culture_normalized": "sudan",
+    "gold_label": "acceptable",
+    "interaction": "At a dinner party at his friend's house, Mark carefully passed the salt to Sarah using his right hand. Is what Mark did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Sudan, it is considered impolite to pass food or objects with the right hand, as the right hand is reserved for eating. The left hand is used for passing objects."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 23,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "serbia",
+    "culture_normalized": "serbia",
+    "gold_label": "unacceptable",
+    "interaction": "James went to a friend's house for a gathering. He decided to wear sweatpants and a t-shirt because he felt it was just a casual meet-up. Is what James did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Serbia, casual gatherings often have a relaxed dress code, and sweatpants and a t-shirt are considered suitable attire for informal events."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 24,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "sweden",
+    "culture_normalized": "sweden",
+    "gold_label": "unacceptable",
+    "interaction": "Jenna was invited to a dinner at her friend, Tom's house. Knowing that Tom had a young daughter, Jenna decided to bring a bottle of wine for Tom and a comic book for his daughter. At the dinner, she presented the wine to Tom but decided to keep the comic book for another occasion. Is what Jenna did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Sweden, it's common for adults to drink wine, and Jenna's gift to Tom is considered polite and considerate. However, keeping the comic book for another occasion might be seen as a thoughtful gesture, but not necessarily a breach of social norms."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 26,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "israel",
+    "culture_normalized": "israel",
+    "gold_label": "unacceptable",
+    "interaction": "Jack was invited to dinner at his friend Sarah's house. Wanting to contribute, Jack prepared a dish that combined both meat and dairy and proudly presented it upon arrival. Is what Jack did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Israel, it is common for people to combine meat and dairy in their meals, especially in traditional dishes. This practice is rooted in Jewish cuisine and is not considered taboo."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 27,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "serbia",
+    "culture_normalized": "serbia",
+    "gold_label": "unacceptable",
+    "interaction": "During a dinner outing at a fancy restaurant, Sarah insisted on splitting the bill with Michael, the host. She argued that everyone should pay for what they consumed. Is what Sarah did acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Serbia, it's common for friends to split the bill equally, especially in casual settings. However, in a more formal setting like a fancy restaurant, it's also acceptable to split the bill based on individual consumption, as Sarah suggested."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 31,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "Germany",
+    "culture_normalized": "germany",
+    "gold_label": "depends",
+    "interaction": "During a team meeting, Emma directly told her manager that she disagreed with the proposed plan and explained why she thought another approach would work better. Is what Emma did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Germany, direct and open communication is valued in a professional setting, and expressing disagreement in a respectful manner is considered acceptable."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 32,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "South Korea",
+    "culture_normalized": "south korea",
+    "gold_label": "depends",
+    "interaction": "At a family dinner, Daniel addressed his girlfriend’s parents by their first names after meeting them for the first time. Is what Daniel did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In South Korea, it's customary to show respect to elders by using honorific titles and last names when addressing them, especially in formal or family settings. Addressing them by their first names immediately after meeting can be seen as impolite and disrespectful."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  },
+  {
+    "example_id": 33,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "Canada",
+    "culture_normalized": "canada",
+    "gold_label": "depends",
+    "interaction": "When visiting a friend’s apartment, Olivia kept her shoes on after entering because no one explicitly asked her to remove them. Is what Olivia did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Canada, it's generally considered polite to follow the lead of the host or other guests regarding shoe removal. Since no one explicitly asked Olivia to remove her shoes, it's acceptable for her to keep them on."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 34,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "Finland",
+    "culture_normalized": "finland",
+    "gold_label": "depends",
+    "interaction": "During a casual lunch with colleagues, Mark allowed long pauses in the conversation instead of trying to fill every silence with small talk. Is what Mark did socially acceptable?",
+    "prediction": {
+      "label": "acceptable",
+      "explanation": "In Finland, people value directness and honesty, and long pauses in conversation are not uncommon. Mark's behavior is seen as a sign of respect for others' thoughts and a willingness to engage in meaningful conversation."
+    },
+    "predicted_label": "acceptable",
+    "correct": false
+  },
+  {
+    "example_id": 35,
+    "model": "llama",
+    "condition": "culture_only",
+    "culture": "Morocco",
+    "culture_normalized": "morocco",
+    "gold_label": "depends",
+    "interaction": "While walking through a local market, Sophia took photos of vendors and their stalls without asking for permission because she thought the scene looked beautiful. Is what Sophia did socially acceptable?",
+    "prediction": {
+      "label": "unacceptable",
+      "explanation": "In Morocco, taking photos of people without their consent is generally considered impolite and may be seen as an invasion of their privacy. It's customary to ask for permission before taking someone's photo, especially in a market setting where vendors may be protective of their business and personal space."
+    },
+    "predicted_label": "unacceptable",
+    "correct": false
+  }
+]

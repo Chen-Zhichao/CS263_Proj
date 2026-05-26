@@ -4,7 +4,7 @@ import re
 from typing import Any
 
 from dotenv import load_dotenv
-from openai import OpenAI, RateLimitError
+from openai import APIStatusError, OpenAI, RateLimitError
 
 
 load_dotenv()
@@ -79,15 +79,25 @@ def call_llama31_8b(interaction: str, culture_context: str | None = None) -> dic
         raise RuntimeError("HF_TOKEN is missing from .env")
 
     client = OpenAI(base_url=HF_BASE_URL, api_key=token)
-    response = client.chat.completions.create(
-        model=HF_MODEL,
-        messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": build_user_prompt(interaction, culture_context)},
-        ],
-        temperature=0,
-        max_tokens=200,
-    )
+    try:
+        response = client.chat.completions.create(
+            model=HF_MODEL,
+            messages=[
+                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "user", "content": build_user_prompt(interaction, culture_context)},
+            ],
+            temperature=0,
+            max_tokens=200,
+        )
+    except APIStatusError as exc:
+        if exc.status_code == 402:
+            raise RuntimeError(
+                "Hugging Face Inference Providers credits are depleted. "
+                "Wait for the monthly credit reset, buy prepaid credits, subscribe to "
+                "HF PRO, use a custom provider key, or run Llama locally with vLLM."
+            ) from exc
+        raise
+
     return _parse_json_object(response.choices[0].message.content or "")
 
 

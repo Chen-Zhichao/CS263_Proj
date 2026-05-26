@@ -1,0 +1,3 @@
+model,condition,n,accuracy,macro_f1
+openai,culture_only,70,0.686,0.687
+openai,policy,70,0.743,0.742

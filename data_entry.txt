@@ -1,0 +1,900 @@
+================================================================================
+Example 1
+================================================================================
+Interaction: During a visit to her friend's house, Emily brought a beautifully wrapped gift. Upon receiving it, her friend immediately tore open the wrapping paper to see what was inside. Is what her friend did socially acceptable?
+Cultural context: tonga
+Cultural value: Respect for the process, timing, and symbolism in gift-giving.
+Cultural policy: In Tongan gift-giving contexts, gifts may carry social and symbolic meaning, and recipients are often expected to show humility and respect rather than focusing too quickly on the material object. Opening a gift immediately in front of the giver may therefore be sensitive, especially if done eagerly or without acknowledging the giver’s gesture.
+Ground-truth label: unacceptable
+Explanation: In this Tongan gift-giving context, immediately tearing open the wrapping focuses attention too quickly on the material object and may fail to show humility or respect for the giver's gesture. Because the action is described as immediate and eager, it is socially unacceptable.
+
+================================================================================
+Example 2
+================================================================================
+Interaction: During a visit to her friend's house, Emily brought a beautifully wrapped gift. Upon receiving it, her friend immediately opened the wrapping paper to see what was inside. Is what her friend did socially acceptable?
+Cultural context: United States
+Cultural value: Appreciation, emotional expression, and shared enjoyment in gift-giving.
+Cultural policy: In many U.S. social settings, opening a gift in front of the giver can be seen as polite because it allows the recipient to show appreciation and excitement. However, expectations can vary depending on the setting, the type of gift, and whether the giver expects the gift to be opened immediately.
+Ground-truth label: acceptable
+Explanation: In many U.S. social settings, opening a gift in front of the giver is socially acceptable because it allows the recipient to show appreciation and excitement. Although expectations can vary, the described behavior is generally understood as a polite expression of gratitude.
+
+================================================================================
+Example 3
+================================================================================
+Interaction: During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?
+Cultural context: timor-leste
+Cultural value: Hospitality, respect for hosts, and maintaining warm social relationships.
+Cultural policy: In many Timorese social settings, accepting food or drinks offered by a host can be a way to show respect and appreciation for hospitality. However, a polite refusal with a sincere explanation may also be acceptable depending on the relationship, tone, and situation.
+Ground-truth label: depends
+Explanation: Sarah's action depends on the host-guest relationship, her tone, and how strongly refreshments are expected in that setting. Accepting food or drink can show respect for hospitality in Timor-Leste, but a polite refusal with a sincere explanation may also be acceptable.
+
+================================================================================
+Example 4
+================================================================================
+Interaction: During a visit to her friend's house, Sarah decided to skip the offered refreshments, explaining she wasn't thirsty or hungry. Is what Sarah did socially acceptable?
+Cultural context: United States
+Cultural value: Personal choice, honesty, and respect for individual boundaries.
+Cultural policy: In many U.S. social settings, guests are generally allowed to decline food or drinks if they do not want them. At the same time, politeness still matters, and the acceptability of refusing refreshments depends on whether the refusal is expressed respectfully and whether the host interprets it as a rejection of hospitality.
+Ground-truth label: acceptable
+Explanation: In many U.S. social settings, politely declining refreshments is socially acceptable when the guest gives a respectful explanation. Sarah's refusal is framed as honest and polite rather than dismissive of the host.
+
+================================================================================
+Example 5
+================================================================================
+Interaction: Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?
+Cultural context: timor-leste
+Cultural value: Flexibility in social time, interpersonal warmth, and respect for hosts.
+Cultural policy: In some Timorese social situations, time may be treated more flexibly than in strictly punctual cultures, especially for informal gatherings. However, arriving significantly late without notice can still be inconsiderate if the host has prepared food or expected guests at a specific time.
+Ground-truth label: depends
+Explanation: Alex's action depends on the formality of the dinner, whether the host was waiting on him, and whether he notified the host. Flexible social timing may make a short delay more acceptable in some Timorese settings, but arriving thirty minutes late for a weak reason can still be inconsiderate.
+
+================================================================================
+Example 6
+================================================================================
+Interaction: Alex was invited to a friend's house for dinner and decided to arrive 30 minutes after the agreed time, believing it was more important to finish a conversation with a neighbor. Is what Alex did socially acceptable?
+Cultural context: China
+Cultural value: Punctuality, respect for others’ time, and consideration in social appointments.
+Cultural policy: In Chinese social settings, punctuality is often associated with respect, reliability, and consideration for the host. However, the seriousness of being late can depend on the relationship, the formality of the dinner, whether the host was notified, and whether there was a reasonable excuse.
+Ground-truth label: unacceptable
+Explanation: In this Chinese social setting, arriving thirty minutes late to a dinner invitation for a non-urgent reason shows poor consideration for the host's time. Because punctuality is associated with respect and reliability, Alex's action is socially unacceptable.
+
+================================================================================
+Example 7
+================================================================================
+Interaction: During a birthday celebration at her friend's house, Emily decided to give her friend a beautifully wrapped gift. She chose a vibrant yellow wrapping paper because it was bright and cheerful. Is what Emily did socially acceptable?
+Cultural context: italy
+Cultural value: Consideration, symbolism, and respect in gift presentation.
+Cultural policy: In Italian gift-giving contexts, presentation is appreciated, but the meaning of colors and styles can depend on the occasion, the recipient, and local expectations. Bright wrapping paper may be cheerful in some casual contexts, but certain colors or overly flashy presentation may be interpreted differently depending on the situation.
+Ground-truth label: depends
+Explanation: Emily's action depends on the occasion, the recipient, and how the wrapping is interpreted. Bright wrapping paper may feel cheerful and appropriate for a birthday, but some recipients or more formal settings may prefer subtler presentation.
+
+================================================================================
+Example 8
+================================================================================
+Interaction: During a birthday celebration at her friend's house, Emily decided to give her friend a beautifully wrapped gift. She chose a very bright and colorful wrapping paper because it looked cheerful and eye-catching. Is what Emily did socially acceptable?
+Cultural context: Japan
+Cultural value: Modesty, subtle presentation, and respect in gift-giving.
+Cultural policy: In Japanese gift-giving culture, careful and tasteful presentation is important, and modest or elegant wrapping is often preferred. However, the appropriateness of bright or colorful wrapping can depend on the occasion, the recipient, and whether the style appears festive or excessively flashy.
+Ground-truth label: unacceptable
+Explanation: In this Japanese gift-giving context, very bright and eye-catching wrapping conflicts with expectations of modest, tasteful presentation. Because the wrapping is described as highly flashy rather than simply festive, Emily's choice is socially unacceptable.
+
+================================================================================
+Example 9
+================================================================================
+Interaction: At a dinner party, Alex noticed that one of the guests, Sam, was not eating much and appeared uncomfortable. Alex asked Sam in front of everyone if he was on a diet or if he didn't like the food. Is what Alex did socially acceptable?
+Cultural context: new_zealand
+Cultural value: Respect for privacy, personal boundaries, and avoiding public embarrassment.
+Cultural policy: In New Zealand social settings, people generally value privacy, modesty, and not putting others on the spot in public. Directly commenting on someone’s eating habits, body, or personal choices can be sensitive, especially in front of a group.
+Ground-truth label: unacceptable
+Explanation: In New Zealand social settings, publicly asking whether someone is dieting or dislikes the food can embarrass them and violate expectations of privacy. Because Alex put Sam on the spot in front of everyone, the action is socially unacceptable.
+
+================================================================================
+Example 10
+================================================================================
+Interaction: At a dinner party, Alex noticed that one of the guests, Sam, was not eating much and appeared uncomfortable. Alex asked Sam if he was feeling unwell or if he had a poor appetite. Is what Alex did socially acceptable?
+Cultural context: China
+Cultural value: Care, attentiveness, and relational closeness in social dining.
+Cultural policy: In Chinese social dining contexts, noticing whether others are eating enough can be a way to show care and attentiveness. However, questions about someone’s appetite or physical condition should be phrased gently, and the acceptability depends on the relationship, tone, and whether the question might embarrass the person.
+Ground-truth label: depends
+Explanation: Alex's question depends on his relationship with Sam, his tone, and whether the question was asked discreetly. In Chinese dining contexts, noticing someone's appetite can show care, but the same question could embarrass Sam if it feels too public or intrusive.
+
+================================================================================
+Example 11
+================================================================================
+Interaction: During a party at her friend's house, Sarah made it a point to say hello to each guest as she arrived and also bid them goodbye individually when she left. Is what Sarah did socially acceptable?
+Cultural context: france
+Cultural value: Respect for privacy and social etiquette in interpersonal engagements.
+Cultural policy: Always greet everyone personally upon arrival and departure in social gatherings.
+Ground-truth label: acceptable
+Explanation: Given the cultural context, greeting everyone personally upon arrival and departure at social gatherings is seen as a sign of good manners. Hence, Sarah's actions are socially acceptable.
+
+================================================================================
+Example 12
+================================================================================
+Interaction: At a gathering at his friend's house, Sam noticed his phone was low on battery. He asked if he could use his friend's charger, and he borrowed his friend's charger that was already plugged in. Is what Sam did socially acceptable?
+Cultural context: brazil
+Cultural value: Flexibility and communal sharing in social interactions and personal possessions.
+Cultural policy: It's okay to share personal possessions without demanding extensive privacy in communal settings.
+Ground-truth label: acceptable
+Explanation: Given the cultural context that values communal sharing and flexibility regarding personal possessions, Sam's actions were acceptable.
+
+================================================================================
+Example 13
+================================================================================
+Interaction: At a gathering at a friend's house, Sarah entered the room and made sure to greet everyone individually before sitting down. Is what Sarah did socially acceptable?
+Cultural context: egypt
+Cultural value: Respect and modesty in interpersonal interactions.
+Cultural policy: It is respectful to greet everyone present before starting any social interaction.
+Ground-truth label: acceptable
+Explanation: In Egypt, greetings are important before any social interaction, and everyone present is expected to be greeted. Hence what Sarah did is socially acceptable given the cultural context.
+
+================================================================================
+Example 14
+================================================================================
+Interaction: At a local community center, Emily saw her friend Sarah waiting in a long line. Knowing Sarah could help her with some advice, Emily walked up to her and joined the queue to talk. Is what Emily did socially acceptable?
+Cultural context: brazil
+Cultural value: Flexibility in social interactions and communal sharing within personal circles.
+Cultural policy: It's acceptable to prioritize social connections over strict adherence to public queues and to share possessions within close personal circles.
+Ground-truth label: acceptable
+Explanation: Given the cultural context, prioritizing social connections and communal sharing is valued. Therefore, Emily's actions are socially acceptable.
+
+================================================================================
+Example 15
+================================================================================
+Interaction: Mike visited Lisa at her home for the first time. After a brief tour of the house, Lisa offered Mike a small cup of coffee. Mike accepted the coffee with a smile. Is what Mike did socially acceptable?
+Cultural context: brazil
+Cultural value: Hospitality and sociability are central to interactions.
+Cultural policy: It is courteous to accept and offer a small cup of coffee when visiting or hosting to symbolize hospitality.
+Ground-truth label: acceptable
+Explanation: Accepting a small cup of coffee when offered is a gesture of accepting hospitality in this context. Hence, what Mike did is socially acceptable given the cultural background.
+
+================================================================================
+Example 16
+================================================================================
+Interaction: During a dinner party at her friend's house, Anna waited patiently for her friend to offer her food before she began serving herself. Is what Anna did socially acceptable?
+Cultural context: egypt
+Cultural value: Appreciation and respect for the host's efforts and hospitality.
+Cultural policy: One must always wait for the host to serve them at gatherings.
+Ground-truth label: acceptable
+Explanation: Waiting for the host to serve food is a sign of respect and appreciation for their hospitality in this context, making Anna's actions socially acceptable.
+
+================================================================================
+Example 17
+================================================================================
+Interaction: Emily decided to visit her friend Sarah. Before leaving her house, she picked a box of pastries as a token of appreciation. At Sarah's house, Emily offered the pastries to her. Is what Emily did socially acceptable?
+Cultural context: zimbabwe
+Cultural value: Respect and consideration for the host's customs and comfort during a visit.
+Cultural policy: Bringing a small gift, such as food, when visiting someone's home is a gesture of goodwill.
+Ground-truth label: acceptable
+Explanation: Yes, bringing a small gift, especially food, when visiting someone's home is considered a gesture of goodwill and is socially acceptable.
+
+================================================================================
+Example 18
+================================================================================
+Interaction: At a dinner hosted by his friend Lucy, Michael carefully used a napkin to pick up some snacks and made sure to finish everything he served himself. Is what Michael did socially acceptable?
+Cultural context: brazil
+Cultural value: Respect and appreciation for the food provided, indicating enjoyment and satisfaction through careful etiquette.
+Cultural policy: It is polite to finish all the food on one's plate and to use utensils or napkins to handle food that might seem okay to pick up with fingers.
+Ground-truth label: acceptable
+Explanation: Given the cultural context, Michael's actions demonstrate respect and appreciation for the food and the host, making his behavior socially acceptable.
+
+================================================================================
+Example 19
+================================================================================
+Interaction: At a dinner party at his friend's house, Mark carefully passed the salt to Sarah using his right hand. Is what Mark did socially acceptable?
+Cultural context: sudan
+Cultural value: Respect for religious and traditional customs through mindful actions and dressing modestly.
+Cultural policy: It is respectful to use the right hand for gestures and offerings.
+Ground-truth label: acceptable
+Explanation: Using the right hand for gestures and offerings is a sign of respect and consideration for traditional customs. Mark's actions are socially acceptable given the cultural context.
+
+================================================================================
+Example 20
+================================================================================
+Interaction: During a dinner party at Liam's house, Mia was offered coffee. Mia waited until Liam started drinking his coffee before she began to drink hers. Is what Mia did socially acceptable?
+Cultural context: north_macedonia
+Cultural value: Respect for hosts’ hospitality and adherence to visiting etiquette.
+Cultural policy: Accept refreshments offered by the host and wait for them to start before beginning to drink or eat.
+Ground-truth label: acceptable
+Explanation: Yes, it is customary to wait for the host to begin before starting to eat or drink, demonstrating respect for the host's hospitality. Mia's actions are socially acceptable given the cultural context.
+
+================================================================================
+Example 21
+================================================================================
+Interaction: During a housewarming party, Sarah brought a beautifully wrapped gift for Mike, the host. As Mike approached to receive the gift, Sarah used her left hand to hand it over. Is what Sarah did acceptable?
+Cultural context: palestinian_territories
+Cultural value: Thoughtfulness and reciprocity in gift-giving to strengthen community and personal bonds.
+Cultural policy: When giving or receiving gifts, use two hands or the right hand only.
+Ground-truth label: unacceptable
+Explanation: Engaging in the action of giving or receiving gifts with both hands or the right hand is a sign of respect and thoughtfulness. Hence, Sarah's actions are not acceptable given the cultural context.
+
+================================================================================
+Example 22
+================================================================================
+Interaction: At the library, Eric remained seated when he noticed an elderly woman, Mrs. Johnson, standing and looking for a place to sit. Eric did not offer his seat nor stand up when she entered the area. Is what Eric did acceptable?
+Cultural context: somalia
+Cultural value: Respect for elders through deference and acknowledging their higher social status in interactions.
+Cultural policy: Always offer your seat to someone who is older than yourself, and stand up when they enter the room.
+Ground-truth label: unacceptable
+Explanation: Respecting elders by offering your seat and standing up when they enter a room is a significant cultural norm. Therefore, Eric's actions are not acceptable given this cultural context.
+
+================================================================================
+Example 23
+================================================================================
+Interaction: James went to a friend's house for a gathering. He decided to wear sweatpants and a t-shirt because he felt it was just a casual meet-up. Is what James did acceptable?
+Cultural context: serbia
+Cultural value: Appreciation for traditions and maintaining a neat appearance in social settings.
+Cultural policy: Dressing neatly for social occasions is expected.
+Ground-truth label: unacceptable
+Explanation: Dressing neatly for social occasions is expected, regardless of the casual nature of the gathering. Therefore, James's choice of attire is not acceptable given the cultural context.
+
+================================================================================
+Example 24
+================================================================================
+Interaction: Jenna was invited to a dinner at her friend, Tom's house. Knowing that Tom had a young daughter, Jenna decided to bring a bottle of wine for Tom and a comic book for his daughter. At the dinner, she presented the wine to Tom but decided to keep the comic book for another occasion. Is what Jenna did acceptable?
+Cultural context: sweden
+Cultural value: Thoughtfulness and inclusion in social interactions.
+Cultural policy: When visiting a home, it is considerate to bring gifts not only for the host but also for any children in the household.
+Ground-truth label: unacceptable
+Explanation: Bringing gifts for children in the household when visiting is a sign of thoughtfulness and inclusion, ensuring everyone feels acknowledged. Hence, Jenna's decision to withhold the gift for Tom's daughter is not acceptable given the cultural context.
+
+================================================================================
+Example 25
+================================================================================
+Interaction: At a gathering at a friend's house, Sam decided to keep his hat on throughout the evening, even when everyone settled down in the living room. Is what Sam did acceptable?
+Cultural context: malta
+Cultural value: Respect for traditions and a flexible approach to time.
+Cultural policy: It is important to dress modestly and remove hats in certain indoor settings.
+Ground-truth label: unacceptable
+Explanation: Keeping a hat on indoors, especially in certain settings like someone's home, can be seen as disrespectful in cultures that value modest dress and specific etiquette regarding hats. Hence, Sam's actions are not acceptable given the cultural context.
+
+
+================================================================================
+Example 26
+================================================================================
+Interaction: Jack was invited to dinner at his friend Sarah's house. Wanting to contribute, Jack prepared a dish that combined both meat and dairy and proudly presented it upon arrival. Is what Jack did acceptable?
+Cultural context: israel
+Cultural value: Respect for dietary practices and religious beliefs through mindful consumption and preparation of food.
+Cultural policy: It is correct to observe and honor dietary restrictions by ensuring the separation of dietary groups when preparing or consuming meals.
+Ground-truth label: unacceptable
+Explanation: Considering the rule of thumb regarding the separation of dietary groups, especially in contexts where dietary restrictions are observed, Jack's action of preparing a dish that combines meat and dairy is not acceptable given the context.
+
+================================================================================
+Example 27
+================================================================================
+Interaction: During a dinner outing at a fancy restaurant, Sarah insisted on splitting the bill with Michael, the host. She argued that everyone should pay for what they consumed. Is what Sarah did acceptable?
+Cultural context: serbia
+Cultural value: Respect and consideration for hosts and other guests during shared meals.
+Cultural policy: Expressing gratitude for a meal not by offering to split the bill but by offering to take the host out at a later date.
+Ground-truth label: unacceptable
+Explanation: Expressing gratitude by offering to take the host out at a later date rather than insisting on splitting the bill respects the cultural norms around hospitality. Sarah's actions are not acceptable given the cultural context.
+
+================================================================================
+Example 28
+================================================================================
+Interaction: During a visit to her friend's house, Alice admired a beautiful vase, commenting loudly on its beauty and craftsmanship. Her friend, feeling compelled by Alice's admiration, immediately offered it to Alice as a gift. Alice accepted the gift without hesitation. Is what Alice did acceptable?
+Cultural context: saudi_arabia
+Cultural value: Respect for the beliefs and practices around gift-giving and compliments to avoid misunderstanding and discomfort.
+Cultural policy: It is considered respectful to offer and compliment modestly, and to show appreciation without immediately accepting gifts.
+Ground-truth label: unacceptable
+Explanation: Alice's actions are not acceptable given the cultural context, as it is respectful to compliment modestly and show appreciation without immediately accepting offered gifts. This respects the host's generosity while avoiding potential discomfort or misunderstanding.
+
+================================================================================
+Example 29
+================================================================================
+Interaction: While visiting a friend's house, Sarah noticed someone quietly standing in the corner with their head bowed. Curious about what they were doing, Sarah walked over and started a conversation. Is what Sarah did acceptable?
+Cultural context: israel
+Cultural value: Respect for individual religious practices and traditions.
+Cultural policy: It is appropriate to avoid interrupting someone while they are engaged in personal or religious practices.
+Ground-truth label: unacceptable
+Explanation: Interrupting someone while they are engaged in personal or religious practices is considered disrespectful. Sarah's actions are not acceptable given the cultural context.
+
+================================================================================
+Example 30
+================================================================================
+Interaction: At a crowded social gathering, Mia noticed an elderly lady standing and looking for a place to sit. Despite seeing this, Mia remained seated and continued her conversation with a friend. Is what Mia did acceptable?
+Cultural context: romania
+Cultural value: Respect for elders and attentiveness to courteous gestures in social interactions.
+Cultural policy: It is correct to offer your seat to an elderly person and assist them as needed.
+Ground-truth label: unacceptable
+Explanation: Given the value placed on respect for elders and courtesy in social interactions, Mia's actions are not acceptable. It is considered polite to offer one's seat to an elderly person and assist them if possible.
+
+================================================================================
+Example 31
+================================================================================
+Interaction: During a team meeting, Emma directly told her manager that she disagreed with the proposed plan and explained why she thought another approach would work better. Is what Emma did socially acceptable?
+Cultural context: Germany
+Cultural value: Direct communication, professional honesty, and task-oriented discussion.
+Cultural policy: In many German workplace settings, direct disagreement can be acceptable when it is expressed professionally, supported by reasoning, and focused on improving the work rather than criticizing the person.
+Ground-truth label: depends
+Explanation: Emma’s action depends on her tone, wording, and workplace hierarchy. Direct disagreement may be acceptable if it is respectful and evidence-based, but it could be inappropriate if it sounds confrontational or publicly undermines the manager.
+
+================================================================================
+Example 32
+================================================================================
+Interaction: At a family dinner, Daniel addressed his girlfriend’s parents by their first names after meeting them for the first time. Is what Daniel did socially acceptable?
+Cultural context: South Korea
+Cultural value: Respect for age, family hierarchy, and formal address.
+Cultural policy: In many South Korean family settings, people are expected to use appropriate titles or formal forms of address when speaking to elders or someone they have just met.
+Ground-truth label: depends
+Explanation: Daniel’s behavior depends on whether the parents invited him to use their first names and how close the relationship already was. Without such permission, using first names may seem too casual, but in a more international or informal family setting it may be tolerated.
+
+================================================================================
+Example 33
+================================================================================
+Interaction: When visiting a friend’s apartment, Olivia kept her shoes on after entering because no one explicitly asked her to remove them. Is what Olivia did socially acceptable?
+Cultural context: Canada
+Cultural value: Cleanliness, household respect, and attention to host expectations.
+Cultural policy: In many Canadian homes, guests are often expected to remove their shoes, especially in private homes or during wet or snowy weather, but expectations can vary by household.
+Ground-truth label: depends
+Explanation: Olivia’s action depends on the household norm, weather, and whether other guests removed their shoes. If everyone else kept their shoes on, it may be acceptable; if the home clearly followed a shoes-off custom, keeping them on could seem inconsiderate.
+
+================================================================================
+Example 34
+================================================================================
+Interaction: During a casual lunch with colleagues, Mark allowed long pauses in the conversation instead of trying to fill every silence with small talk. Is what Mark did socially acceptable?
+Cultural context: Finland
+Cultural value: Comfort with silence, personal space, and thoughtful communication.
+Cultural policy: In many Finnish social settings, silence is not necessarily awkward and may be seen as natural or respectful rather than rude.
+Ground-truth label: depends
+Explanation: Mark’s behavior depends on the context and the expectations of the group. Comfortable silence may be acceptable in Finland, but if the lunch was meant for active networking or if others seemed uncomfortable, remaining silent for too long could be interpreted as disengagement.
+
+================================================================================
+Example 35
+================================================================================
+Interaction: While walking through a local market, Sophia took photos of vendors and their stalls without asking for permission because she thought the scene looked beautiful. Is what Sophia did socially acceptable?
+Cultural context: Morocco
+Cultural value: Respect for privacy, personal dignity, and local customs in public spaces.
+Cultural policy: In many Moroccan settings, taking photos of people, especially in markets or traditional spaces, may require permission out of respect for privacy and personal boundaries.
+Ground-truth label: depends
+Explanation: Sophia’s action depends on whether the vendors were identifiable, whether the photos were close-up, and whether she asked permission. Photographing general scenery may be acceptable, but taking direct photos of people without consent could be considered intrusive.
+
+================================================================================
+Example 36
+================================================================================
+Interaction: After receiving good service at a restaurant, Ethan left a small tip of about five percent because he was unsure how much was expected. Is what Ethan did socially acceptable?
+Cultural context: United Kingdom
+Cultural value: Courtesy, appreciation for service, and moderate tipping practices.
+Cultural policy: In many UK restaurants, tipping is appreciated but not always mandatory, especially if a service charge is already included.
+Ground-truth label: depends
+Explanation: Ethan’s action depends on whether a service charge was included and what type of restaurant it was. A small tip may be acceptable if service was already charged, but it may seem low in a setting where tipping around ten percent is expected for good service.
+
+================================================================================
+Example 37
+================================================================================
+Interaction: When meeting a new classmate at a party, Isabella greeted him with a friendly cheek kiss because that is how she greeted several other people there. Is what Isabella did socially acceptable?
+Cultural context: Argentina
+Cultural value: Warmth, friendliness, and physical closeness in social greetings.
+Cultural policy: In many Argentine social settings, a cheek kiss can be a common friendly greeting, but appropriateness depends on the relationship, comfort level, and social context.
+Ground-truth label: depends
+Explanation: Isabella’s action depends on whether the classmate was comfortable with this greeting and whether the social setting made it expected. It may be normal among friends or peers, but it could feel too familiar if the other person expected a more reserved greeting.
+
+================================================================================
+Example 38
+================================================================================
+Interaction: During a business meeting, Jason received a business card and quickly put it into his pocket without looking at it carefully. Is what Jason did socially acceptable?
+Cultural context: Singapore
+Cultural value: Professional respect, attentiveness, and business etiquette.
+Cultural policy: In many Singaporean business settings, business cards should be received respectfully and briefly acknowledged before being put away.
+Ground-truth label: depends
+Explanation: Jason’s action depends on the formality of the meeting and the expectations of the people present. In a formal business setting, quickly pocketing the card may seem dismissive, but in a casual or fast-paced interaction it may not be considered seriously rude.
+
+================================================================================
+Example 39
+================================================================================
+Interaction: At a dinner with new acquaintances, Ava asked someone how much they paid for their apartment because she was curious about local housing prices. Is what Ava did socially acceptable?
+Cultural context: Norway
+Cultural value: Privacy, equality, and respect for personal financial boundaries.
+Cultural policy: In many Norwegian social settings, direct questions about personal finances may be considered sensitive unless the relationship is close or the topic naturally arises.
+Ground-truth label: depends
+Explanation: Ava’s question depends on the relationship and tone. Discussing housing costs may be acceptable in a practical conversation about the housing market, but asking a new acquaintance directly about personal expenses may feel intrusive.
+
+================================================================================
+Example 40
+================================================================================
+Interaction: At a wedding reception, Noah declined an alcoholic drink by saying he preferred not to drink that evening. Is what Noah did socially acceptable?
+Cultural context: Turkey
+Cultural value: Hospitality, personal choice, and sensitivity to religious or social expectations.
+Cultural policy: In Turkish social settings, drinking customs can vary widely depending on family, region, and religious background, so politely accepting or declining alcohol depends heavily on context.
+Ground-truth label: depends
+Explanation: Noah’s refusal depends on the setting and how he expressed it. Politely declining alcohol may be acceptable, especially in religious or family-oriented contexts, but in a social group where drinking together is expected, it may require a respectful explanation.
+
+================================================================================
+Example 41
+================================================================================
+Interaction: During a relaxed office meeting, Liam made a sarcastic joke about how confusing the new company policy was. Is what Liam did socially acceptable?
+Cultural context: Australia
+Cultural value: Informality, humor, and workplace camaraderie.
+Cultural policy: In many Australian workplace settings, humor and mild sarcasm can be acceptable, but they should not embarrass others or undermine serious discussion.
+Ground-truth label: depends
+Explanation: Liam’s joke depends on tone, audience, and timing. Light humor may be acceptable in an informal workplace, but sarcasm about company policy could be inappropriate if senior managers are present or if it disrupts an important discussion.
+
+================================================================================
+Example 42
+================================================================================
+Interaction: Claire brought her small dog with her to an outdoor café where several other customers were sitting nearby. Is what Claire did socially acceptable?
+Cultural context: France
+Cultural value: Public etiquette, pet friendliness, and consideration for shared spaces.
+Cultural policy: In many French public settings, dogs may be accepted in cafés or outdoor spaces, but expectations depend on the establishment, the dog’s behavior, and the comfort of other guests.
+Ground-truth label: depends
+Explanation: Claire’s action depends on whether the café allows dogs and whether the dog remains calm. Bringing a dog to an outdoor café may be acceptable, but it could be inappropriate if the dog disturbs other customers or if the café has rules against pets.
+
+================================================================================
+Example 43
+================================================================================
+Interaction: At a family gathering, Mateo held hands with his partner and occasionally showed affection in front of relatives. Is what Mateo did socially acceptable?
+Cultural context: Mexico
+Cultural value: Family closeness, public modesty, and respect for elders.
+Cultural policy: In many Mexican family settings, mild public affection may be acceptable, but expectations depend on family norms, generational differences, and the level of formality.
+Ground-truth label: depends
+Explanation: Mateo’s behavior depends on the family’s expectations and the type of affection shown. Holding hands may be acceptable, but more visible displays of affection could be seen as inappropriate in a conservative or elder-centered gathering.
+
+================================================================================
+Example 44
+================================================================================
+Interaction: At a pub with coworkers after work, Ryan brought up a heated political topic and asked everyone what they thought. Is what Ryan did socially acceptable?
+Cultural context: Ireland
+Cultural value: Sociability, humor, and sensitivity around divisive topics.
+Cultural policy: In Irish social settings, political discussion may be acceptable among close friends but can be sensitive in casual or mixed company.
+Ground-truth label: depends
+Explanation: Ryan’s action depends on the relationship among the coworkers and how divisive the topic was. A thoughtful discussion may be acceptable among people who know each other well, but raising a heated topic in a casual pub setting could make others uncomfortable.
+
+================================================================================
+Example 45
+================================================================================
+Interaction: At 10:30 p.m., Sophie sent a non-urgent work message to her coworker because she remembered a detail about tomorrow’s meeting. Is what Sophie did socially acceptable?
+Cultural context: France
+Cultural value: Work-life boundaries, personal time, and professional respect.
+Cultural policy: In many French work environments, personal time outside working hours is valued, and non-urgent work communication late at night may be inappropriate unless workplace norms allow it.
+Ground-truth label: depends
+Explanation: Sophie’s action depends on workplace expectations and whether she expected an immediate response. Sending a message late at night may be acceptable if it is clearly non-urgent, but it could be seen as disrespecting work-life boundaries if it creates pressure to respond.
+
+================================================================================
+Example 46
+================================================================================
+Interaction: During a formal dinner, Lucas began discussing his recent medical procedure in detail while others were eating. Is what Lucas did socially acceptable?
+Cultural context: United States
+Cultural value: Personal openness, conversational boundaries, and sensitivity to others’ comfort.
+Cultural policy: In U.S. social settings, personal health topics may be discussed among close friends, but detailed medical descriptions during meals can be considered uncomfortable or inappropriate.
+Ground-truth label: depends
+Explanation: Lucas’s behavior depends on the relationship among the guests and how graphic the details were. A brief mention of health may be acceptable, but detailed medical discussion during dinner could make others uncomfortable.
+
+================================================================================
+Example 47
+================================================================================
+Interaction: At a university seminar, Aisha challenged a guest speaker’s argument during the Q&A session and asked for evidence supporting the claim. Is what Aisha did socially acceptable?
+Cultural context: United States
+Cultural value: Academic debate, critical thinking, and respectful questioning.
+Cultural policy: In many U.S. academic settings, questioning and challenging ideas is acceptable when done respectfully and focused on the argument rather than the person.
+Ground-truth label: depends
+Explanation: Aisha’s action depends on her tone and wording. Asking for evidence can be acceptable in an academic seminar, but if the challenge is phrased aggressively or meant to embarrass the speaker, it may be considered inappropriate.
+
+================================================================================
+Example 48
+================================================================================
+Interaction: During a video call with relatives, Elena turned off her camera because she felt tired but continued listening and responding. Is what Elena did socially acceptable?
+Cultural context: Spain
+Cultural value: Warm family interaction, attentiveness, and visible engagement.
+Cultural policy: In many Spanish family contexts, visible warmth and active participation are appreciated, but remote communication norms can vary depending on age, closeness, and circumstances.
+Ground-truth label: depends
+Explanation: Elena’s action depends on whether she explained why her camera was off and whether the family expected face-to-face interaction. It may be acceptable if she was still engaged, but it could feel distant if the call was meant to maintain close family connection.
+
+================================================================================
+Example 49
+================================================================================
+Interaction: During a religious holiday meal, Jacob checked his phone several times to reply to non-urgent messages. Is what Jacob did socially acceptable?
+Cultural context: Poland
+Cultural value: Family presence, religious tradition, and respect during shared meals.
+Cultural policy: In many Polish family or religious holiday settings, attentiveness to family and tradition is valued, and repeated phone use during the meal may be viewed negatively.
+Ground-truth label: depends
+Explanation: Jacob’s behavior depends on the formality of the meal, the family’s expectations, and whether the messages were urgent. Occasional phone use may be tolerated, but repeatedly checking non-urgent messages during a meaningful family meal could seem disrespectful.
+
+================================================================================
+Example 50
+================================================================================
+Interaction: At a community event, Priya used English instead of the local language when speaking with older community members because she felt more comfortable in English. Is what Priya did socially acceptable?
+Cultural context: India
+Cultural value: Linguistic respect, generational sensitivity, and social inclusion.
+Cultural policy: In many Indian communities, language choice can carry social meaning, and using a local language with elders may show respect and closeness, though English may also be common in many urban or professional settings.
+Ground-truth label: depends
+Explanation: Priya’s action depends on the community, the elders’ comfort with English, and the setting. Using English may be acceptable in urban or multilingual contexts, but it could seem distant or exclusionary if the older community members prefer the local language.
+
+================================================================================
+Example 51
+================================================================================
+Interaction: During a formal meeting in the Netherlands, Julia clearly explained why she thought the current plan was inefficient and suggested a more practical alternative. Is what Julia did socially acceptable?
+Cultural context: Netherlands
+Cultural value: Directness, efficiency, and open discussion.
+Cultural policy: In many Dutch professional settings, direct and practical feedback is acceptable when it is constructive and focused on solving the problem.
+Ground-truth label: acceptable
+Explanation: Julia’s action is socially acceptable because she expressed disagreement in a clear and constructive way. Her feedback focused on improving the plan rather than attacking anyone personally.
+
+================================================================================
+Example 52
+================================================================================
+Interaction: At a dinner in Greece, Maria complimented the host warmly and thanked them several times for preparing the meal. Is what Maria did socially acceptable?
+Cultural context: Greece
+Cultural value: Hospitality, warmth, and appreciation for hosts.
+Cultural policy: In many Greek social settings, expressing warm appreciation for a host’s effort is considered polite and respectful.
+Ground-truth label: acceptable
+Explanation: Maria’s behavior is socially acceptable because she showed gratitude for the host’s hospitality. Complimenting the meal and thanking the host helps reinforce warmth and respect in the social interaction.
+
+================================================================================
+Example 53
+================================================================================
+Interaction: During a meeting in Japan, Kenji paused before responding to a proposal so he could think carefully instead of answering immediately. Is what Kenji did socially acceptable?
+Cultural context: Japan
+Cultural value: Thoughtfulness, restraint, and careful communication.
+Cultural policy: In many Japanese professional settings, pausing before responding can signal careful thought and respect for the seriousness of the discussion.
+Ground-truth label: acceptable
+Explanation: Kenji’s action is socially acceptable because he did not rush into a response. Taking time to think can show respect for the discussion and a desire to answer thoughtfully.
+
+================================================================================
+Example 54
+================================================================================
+Interaction: At a mosque visit in Malaysia, Laura covered her shoulders and followed the posted instructions before entering. Is what Laura did socially acceptable?
+Cultural context: Malaysia
+Cultural value: Respect for religious spaces, modesty, and local customs.
+Cultural policy: Visitors to religious spaces are expected to dress modestly and follow local instructions as a sign of respect.
+Ground-truth label: acceptable
+Explanation: Laura’s behavior is socially acceptable because she respected the expectations of the religious space. Covering her shoulders and following instructions shows consideration for local customs and worshippers.
+
+================================================================================
+Example 55
+================================================================================
+Interaction: At a Japanese restaurant, Daniel placed his chopsticks neatly on the chopstick rest when he was not using them. Is what Daniel did socially acceptable?
+Cultural context: Japan
+Cultural value: Dining etiquette, orderliness, and respect at the table.
+Cultural policy: In Japanese dining etiquette, chopsticks should be placed neatly on a chopstick rest or appropriate surface when not in use.
+Ground-truth label: acceptable
+Explanation: Daniel’s behavior is socially acceptable because he handled the chopsticks respectfully. Placing them on the rest follows common dining etiquette and avoids inappropriate chopstick placement.
+
+================================================================================
+Example 56
+================================================================================
+Interaction: At a community meal in Ethiopia, Hannah waited for the host to invite everyone to begin before she started eating. Is what Hannah did socially acceptable?
+Cultural context: Ethiopia
+Cultural value: Respect for hosts, communal dining, and patience.
+Cultural policy: In many Ethiopian communal dining settings, waiting for the host or elders to signal the start of the meal shows respect.
+Ground-truth label: acceptable
+Explanation: Hannah’s behavior is socially acceptable because she waited for the proper cue before eating. This shows respect for the host and the communal nature of the meal.
+
+================================================================================
+Example 57
+================================================================================
+Interaction: During a business trip in Switzerland, Kevin arrived at the meeting room five minutes early and had his materials ready. Is what Kevin did socially acceptable?
+Cultural context: Switzerland
+Cultural value: Punctuality, preparation, and professional reliability.
+Cultural policy: In many Swiss professional settings, arriving on time or slightly early is considered respectful and professional.
+Ground-truth label: acceptable
+Explanation: Kevin’s action is socially acceptable because arriving early and prepared shows respect for others’ time. It aligns with expectations of punctuality and professionalism.
+
+================================================================================
+Example 58
+================================================================================
+Interaction: At a temple in Thailand, Maya spoke quietly and avoided touching religious objects without permission. Is what Maya did socially acceptable?
+Cultural context: Thailand
+Cultural value: Respect for sacred spaces, restraint, and religious sensitivity.
+Cultural policy: Visitors to temples are expected to behave quietly and avoid touching sacred objects unless invited or permitted.
+Ground-truth label: acceptable
+Explanation: Maya’s behavior is socially acceptable because she acted respectfully in a sacred space. Speaking quietly and avoiding unauthorized contact with religious objects demonstrates awareness of local religious etiquette.
+
+================================================================================
+Example 59
+================================================================================
+Interaction: During a meeting in Sweden, Oliver waited his turn and avoided interrupting others while they were speaking. Is what Oliver did socially acceptable?
+Cultural context: Sweden
+Cultural value: Equality, listening, and respectful group discussion.
+Cultural policy: In many Swedish professional and social settings, allowing others to finish speaking and avoiding interruption is considered respectful.
+Ground-truth label: acceptable
+Explanation: Oliver’s action is socially acceptable because he respected the flow of conversation. Waiting his turn supports equal participation and shows consideration for others.
+
+================================================================================
+Example 60
+================================================================================
+Interaction: At a dinner in Lebanon, Nora praised the host’s cooking and accepted a second serving after the host warmly insisted. Is what Nora did socially acceptable?
+Cultural context: Lebanon
+Cultural value: Hospitality, generosity, and appreciation for food.
+Cultural policy: In many Lebanese social settings, accepting food after the host insists can show appreciation for hospitality and warmth.
+Ground-truth label: acceptable
+Explanation: Nora’s behavior is socially acceptable because she responded positively to the host’s generosity. Accepting a second serving after being warmly encouraged can show appreciation and strengthen social warmth.
+
+================================================================================
+Example 61
+================================================================================
+Interaction: At a restaurant in Japan, Tyler finished eating and stuck his chopsticks upright into his bowl of rice while talking to his friend. Is what Tyler did socially acceptable?
+Cultural context: Japan
+Cultural value: Respect for dining rituals and sensitivity to symbolic meanings.
+Cultural policy: In Japanese dining etiquette, chopsticks should not be stuck upright into rice because this resembles funeral-related ritual practices.
+Ground-truth label: unacceptable
+Explanation: Tyler’s action is socially unacceptable because placing chopsticks upright in rice carries an inappropriate symbolic association. It violates a well-known dining etiquette norm in this cultural context.
+
+================================================================================
+Example 62
+================================================================================
+Interaction: While visiting a temple in Thailand, Ben playfully patted a child on the head because he thought the child was cute. Is what Ben did socially acceptable?
+Cultural context: Thailand
+Cultural value: Respect for the body, spiritual sensitivity, and restraint.
+Cultural policy: In Thai cultural contexts, touching someone’s head can be inappropriate because the head is often treated as a spiritually significant part of the body.
+Ground-truth label: unacceptable
+Explanation: Ben’s behavior is socially unacceptable because touching a child’s head, even playfully, may be considered disrespectful. His intention may have been friendly, but the action conflicts with local expectations around bodily respect.
+
+================================================================================
+Example 63
+================================================================================
+Interaction: At a formal dinner in the United Arab Emirates, Rachel loudly criticized the host’s country and local customs, saying they seemed strange to her. Is what Rachel did socially acceptable?
+Cultural context: United Arab Emirates
+Cultural value: Respect for hosts, national dignity, and polite public behavior.
+Cultural policy: In many Emirati social settings, guests are expected to speak respectfully about the host country, its customs, and its people.
+Ground-truth label: unacceptable
+Explanation: Rachel’s action is socially unacceptable because she publicly insulted the host’s country and customs. Such comments can be seen as disrespectful and offensive in a formal social setting.
+
+================================================================================
+Example 64
+================================================================================
+Interaction: Before entering a Hindu temple in India, Aaron ignored the sign asking visitors to remove their shoes and walked inside with his shoes on. Is what Aaron did socially acceptable?
+Cultural context: India
+Cultural value: Respect for sacred spaces, cleanliness, and religious etiquette.
+Cultural policy: Visitors are generally expected to remove their shoes before entering Hindu temples and other sacred spaces.
+Ground-truth label: unacceptable
+Explanation: Aaron’s behavior is socially unacceptable because he ignored a clear religious etiquette rule. Wearing shoes inside the temple shows disrespect for the sacred space and the people worshipping there.
+
+================================================================================
+Example 65
+================================================================================
+Interaction: At a pedestrian crossing in Germany, Mia crossed the street against the red signal while several children were waiting nearby. Is what Mia did socially acceptable?
+Cultural context: Germany
+Cultural value: Rule-following, public order, and setting a responsible example.
+Cultural policy: In many German public settings, pedestrians are expected to follow crossing signals, especially when children are present.
+Ground-truth label: unacceptable
+Explanation: Mia’s action is socially unacceptable because crossing against the signal violates public order expectations and sets a poor example for children. The presence of children makes the behavior especially inappropriate.
+
+================================================================================
+Example 66
+================================================================================
+Interaction: At a quiet public bath in Japan, Alex entered the shared bath without washing himself first. Is what Alex did socially acceptable?
+Cultural context: Japan
+Cultural value: Cleanliness, shared-space etiquette, and consideration for others.
+Cultural policy: In Japanese public bathing etiquette, people are expected to wash themselves thoroughly before entering the shared bath.
+Ground-truth label: unacceptable
+Explanation: Alex’s behavior is socially unacceptable because entering the shared bath without washing first violates an important cleanliness norm. It shows a lack of consideration for others using the same bath.
+
+================================================================================
+Example 67
+================================================================================
+Interaction: During a meeting in South Korea, Peter casually called the company president by his first name without being invited to do so. Is what Peter did socially acceptable?
+Cultural context: South Korea
+Cultural value: Hierarchy, seniority, and formal respect in professional settings.
+Cultural policy: In many South Korean workplaces, people are expected to address senior figures using appropriate titles unless invited to speak more casually.
+Ground-truth label: unacceptable
+Explanation: Peter’s action is socially unacceptable because calling a company president by first name can sound overly casual and disrespectful in a hierarchical professional setting. Without permission, a formal title would be more appropriate.
+
+================================================================================
+Example 68
+================================================================================
+Interaction: During a quiet train ride in Switzerland, Emma played music from her phone speaker without using headphones. Is what Emma did socially acceptable?
+Cultural context: Switzerland
+Cultural value: Public quietness, consideration, and respect for shared spaces.
+Cultural policy: In many Swiss public spaces, people are expected to avoid disturbing others with unnecessary noise.
+Ground-truth label: unacceptable
+Explanation: Emma’s action is socially unacceptable because playing music aloud in a quiet shared space disturbs others. Using headphones would better respect the public expectation of quietness and consideration.
+
+================================================================================
+Example 69
+================================================================================
+Interaction: At a dinner in Italy, David poured grated cheese over a seafood pasta dish after the host had explained that the dish was prepared in a traditional style without cheese. Is what David did socially acceptable?
+Cultural context: Italy
+Cultural value: Respect for culinary tradition, host effort, and food etiquette.
+Cultural policy: In many Italian dining contexts, adding cheese to seafood pasta may be considered inappropriate, especially when the host has explained the intended preparation.
+Ground-truth label: unacceptable
+Explanation: David’s behavior is socially unacceptable because he ignored the host’s explanation and altered the dish in a way that may conflict with local culinary norms. This can be seen as disrespectful to the host’s effort and the dish’s tradition.
+
+================================================================================
+Example 70
+================================================================================
+Interaction: At a formal meeting in China, Laura received a document from a senior colleague and immediately scribbled notes across the front page without asking. Is what Laura did socially acceptable?
+Cultural context: China
+Cultural value: Respect for seniority, documents, and professional formality.
+Cultural policy: In formal Chinese professional settings, materials received from senior colleagues should be handled respectfully, especially if they appear official or carefully prepared.
+Ground-truth label: unacceptable
+Explanation: Laura’s behavior is socially unacceptable because writing directly across the front page of a document from a senior colleague may appear careless or disrespectful. It would be more appropriate to ask first or take notes separately.
+
+================================================================================
+Example 71
+================================================================================
+Interaction: At a neighborhood barbecue in South Africa, Grace brought a vegetarian dish to share but did not tell the host ahead of time that she did not eat meat. Is what Grace did socially acceptable?
+Cultural context: South Africa
+Cultural value: Hospitality, communal eating, and consideration for hosts and guests.
+Cultural policy: In many South African social gatherings, sharing food is appreciated, but guests should also consider the host's planning and communicate dietary needs politely when possible.
+Ground-truth label: depends
+Explanation: Grace's action depends on the relationship with the host and whether her dietary preference created difficulty. Bringing a dish to share can be considerate, but not informing the host ahead of time could be awkward if the meal was planned around meat.
+
+================================================================================
+Example 72
+================================================================================
+Interaction: During a business lunch in Denmark, Nathan gave brief answers and avoided personal questions because he wanted to keep the conversation professional. Is what Nathan did socially acceptable?
+Cultural context: Denmark
+Cultural value: Privacy, modesty, equality, and informal professionalism.
+Cultural policy: In Danish professional settings, privacy and modesty are often valued, but social warmth and relaxed conversation can also matter depending on the context.
+Ground-truth label: depends
+Explanation: Nathan's behavior depends on the tone of the lunch and the expectations of the group. Keeping boundaries may be acceptable in a professional setting, but being too brief or distant could seem unfriendly if the lunch was meant to build rapport.
+
+================================================================================
+Example 73
+================================================================================
+Interaction: At a family meal in Vietnam, Chloe served herself before the eldest person at the table had started eating because everyone seemed hungry. Is what Chloe did socially acceptable?
+Cultural context: Vietnam
+Cultural value: Respect for elders, family hierarchy, and meal etiquette.
+Cultural policy: In many Vietnamese family settings, elders are often given priority or acknowledged before younger people begin eating.
+Ground-truth label: depends
+Explanation: Chloe's action depends on the family's habits and whether the meal was formal. In a relaxed household it may be overlooked, but in a more traditional family setting, eating before the eldest person starts could be seen as disrespectful.
+
+================================================================================
+Example 74
+================================================================================
+Interaction: During a conversation in Kenya, Aiden avoided direct eye contact with an older community leader because he wanted to show respect. Is what Aiden did socially acceptable?
+Cultural context: Kenya
+Cultural value: Respect for elders, humility, and appropriate nonverbal behavior.
+Cultural policy: In some Kenyan communities, avoiding prolonged direct eye contact with elders can signal respect, but expectations vary by region, generation, and setting.
+Ground-truth label: depends
+Explanation: Aiden's behavior depends on the specific community and the leader's expectations. Avoiding strong eye contact may be respectful in some elder-centered contexts, but in other professional or urban settings it could be interpreted as uncertainty or disengagement.
+
+================================================================================
+Example 75
+================================================================================
+Interaction: At a small gathering in Portugal, Sofia declined a second dessert after praising the host's cooking and saying she was full. Is what Sofia did socially acceptable?
+Cultural context: Portugal
+Cultural value: Hospitality, appreciation for food, and polite social exchange.
+Cultural policy: In many Portuguese social settings, hosts may encourage guests to eat more, but guests can decline politely when they show appreciation and avoid rejecting the host's effort.
+Ground-truth label: depends
+Explanation: Sofia's action depends on how strongly the host insisted and how politely she declined. Praising the food makes the refusal more acceptable, but repeatedly refusing in a setting where the host expects guests to accept more food could feel slightly discourteous.
+
+================================================================================
+Example 76
+================================================================================
+Interaction: During a festival in Indonesia, Marcus wore casual shorts while visiting a nearby cultural site because the weather was very hot. Is what Marcus did socially acceptable?
+Cultural context: Indonesia
+Cultural value: Modesty, respect for local customs, and sensitivity in public or sacred spaces.
+Cultural policy: In many Indonesian cultural or religious sites, modest clothing is expected, though expectations can vary by location and whether coverings are available for visitors.
+Ground-truth label: depends
+Explanation: Marcus's action depends on the type of cultural site and local dress expectations. Shorts may be acceptable in a casual outdoor festival area, but they could be inappropriate at a sacred or formal site where modest dress is expected.
+
+================================================================================
+Example 77
+================================================================================
+Interaction: At a meeting in Belgium, Elise listened to the full discussion before offering a concise suggestion that addressed everyone's concerns. Is what Elise did socially acceptable?
+Cultural context: Belgium
+Cultural value: Deliberation, politeness, and balanced group discussion.
+Cultural policy: In many Belgian professional settings, listening carefully and offering measured input is considered respectful and constructive.
+Ground-truth label: acceptable
+Explanation: Elise's action is socially acceptable because she listened before speaking and contributed in a concise, constructive way. Her behavior showed respect for the group discussion.
+
+================================================================================
+Example 78
+================================================================================
+Interaction: At a home visit in Ghana, Michael greeted the older relatives first before greeting younger family members. Is what Michael did socially acceptable?
+Cultural context: Ghana
+Cultural value: Respect for elders, family hierarchy, and courteous greetings.
+Cultural policy: In many Ghanaian social settings, greeting elders first is an important sign of respect and good manners.
+Ground-truth label: acceptable
+Explanation: Michael's behavior is socially acceptable because he acknowledged the elders first. This aligns with expectations of respect and proper greeting order in many Ghanaian family settings.
+
+================================================================================
+Example 79
+================================================================================
+Interaction: At a dinner in Peru, Camila thanked the host warmly and offered to help clear the table after the meal. Is what Camila did socially acceptable?
+Cultural context: Peru
+Cultural value: Hospitality, gratitude, and helpfulness in family or social meals.
+Cultural policy: In many Peruvian social settings, thanking the host and offering help after a meal can be seen as considerate and respectful.
+Ground-truth label: acceptable
+Explanation: Camila's action is socially acceptable because she showed gratitude and offered practical help. This demonstrates appreciation for the host's effort.
+
+================================================================================
+Example 80
+================================================================================
+Interaction: During a visit to a Buddhist temple in Cambodia, Daniel spoke quietly, dressed modestly, and followed the posted visitor rules. Is what Daniel did socially acceptable?
+Cultural context: Cambodia
+Cultural value: Respect for sacred spaces, modesty, and religious sensitivity.
+Cultural policy: Visitors to Buddhist temples in Cambodia are expected to behave quietly, dress modestly, and follow local instructions.
+Ground-truth label: acceptable
+Explanation: Daniel's behavior is socially acceptable because he respected the temple environment. Speaking quietly, dressing modestly, and following the rules show consideration for worshippers and local customs.
+
+================================================================================
+Example 81
+================================================================================
+Interaction: At a business meeting in Austria, Hannah arrived on time, greeted everyone formally, and waited for the meeting chair to begin. Is what Hannah did socially acceptable?
+Cultural context: Austria
+Cultural value: Punctuality, formality, and professional respect.
+Cultural policy: In many Austrian professional settings, punctuality, formal greetings, and respect for meeting structure are expected.
+Ground-truth label: acceptable
+Explanation: Hannah's action is socially acceptable because she followed professional expectations around time, greetings, and meeting order. Her behavior showed respect for the setting.
+
+================================================================================
+Example 82
+================================================================================
+Interaction: At a family celebration in Colombia, Andres greeted relatives warmly and spent time speaking with older family members before joining friends his age. Is what Andres did socially acceptable?
+Cultural context: Colombia
+Cultural value: Family closeness, warmth, and respect for older relatives.
+Cultural policy: In many Colombian family gatherings, warmly greeting relatives and showing attention to older family members is considered respectful.
+Ground-truth label: acceptable
+Explanation: Andres's behavior is socially acceptable because he showed warmth and respect toward older relatives. Spending time with them before joining peers supports family closeness.
+
+================================================================================
+Example 83
+================================================================================
+Interaction: At a conference in Taiwan, Mei received a name badge and conference materials with both hands and thanked the organizer. Is what Mei did socially acceptable?
+Cultural context: Taiwan
+Cultural value: Courtesy, respect in exchange, and professional politeness.
+Cultural policy: In many Taiwanese professional or formal settings, receiving items with both hands can show respect and attentiveness.
+Ground-truth label: acceptable
+Explanation: Mei's action is socially acceptable because receiving materials with both hands and thanking the organizer signals respect and politeness.
+
+================================================================================
+Example 84
+================================================================================
+Interaction: During a community meeting in Rwanda, Patrick allowed the speaker to finish before asking a calm follow-up question. Is what Patrick did socially acceptable?
+Cultural context: Rwanda
+Cultural value: Respectful listening, restraint, and community harmony.
+Cultural policy: In many Rwandan community settings, listening respectfully and avoiding interruption can support harmony and show consideration.
+Ground-truth label: acceptable
+Explanation: Patrick's behavior is socially acceptable because he waited his turn and asked his question calmly. This respects the speaker and the community setting.
+
+================================================================================
+Example 85
+================================================================================
+Interaction: At a memorial service in the Philippines, Olivia laughed loudly and took smiling selfies near the front of the room while the family was mourning. Is what Olivia did socially acceptable?
+Cultural context: Philippines
+Cultural value: Respect for mourning, family sensitivity, and solemn public behavior.
+Cultural policy: At memorial or wake settings in the Philippines, guests are expected to behave respectfully and avoid actions that trivialize the family's grief.
+Ground-truth label: unacceptable
+Explanation: Olivia's behavior is socially unacceptable because loud laughter and smiling selfies near the mourning family show poor sensitivity to the solemn setting. The action disrespects the family's grief.
+
+================================================================================
+Example 86
+================================================================================
+Interaction: During a formal meal in Hungary, Robert began eating before the host welcomed the guests and raised the first toast. Is what Robert did socially acceptable?
+Cultural context: Hungary
+Cultural value: Respect for hosts, meal rituals, and formal etiquette.
+Cultural policy: In many Hungarian formal dining settings, guests should wait for the host's cue or opening toast before beginning the meal.
+Ground-truth label: unacceptable
+Explanation: Robert's action is socially unacceptable because he ignored the host's role in beginning the formal meal. Waiting for the welcome or first toast would show respect for the occasion.
+
+================================================================================
+Example 87
+================================================================================
+Interaction: At a friend's home in Nigeria, Clara accepted food with her left hand while her right hand was free. Is what Clara did socially acceptable?
+Cultural context: Nigeria
+Cultural value: Respectful exchange, cleanliness norms, and traditional etiquette.
+Cultural policy: In many Nigerian social contexts, the right hand is preferred for giving, receiving, and eating, especially when interacting with hosts or elders.
+Ground-truth label: unacceptable
+Explanation: Clara's behavior is socially unacceptable because using the left hand while the right hand is available can be viewed as disrespectful in many Nigerian social settings. Receiving the food with the right hand would be more appropriate.
+
+================================================================================
+Example 88
+================================================================================
+Interaction: At a quiet classroom in Pakistan, Ryan interrupted the teacher several times to challenge minor details while the teacher was explaining the lesson. Is what Ryan did socially acceptable?
+Cultural context: Pakistan
+Cultural value: Respect for teachers, classroom order, and deference to authority.
+Cultural policy: In many Pakistani classroom settings, students are expected to show respect to teachers and avoid repeated interruptions, especially over minor points.
+Ground-truth label: unacceptable
+Explanation: Ryan's action is socially unacceptable because repeatedly interrupting the teacher disrupts the lesson and shows insufficient respect for the teacher's role. A more appropriate response would be to wait for a question period.
+
+================================================================================
+Example 89
+================================================================================
+Interaction: At a dinner in Russia, Natalie repeatedly refused every dish without explanation and pushed her plate away while the host watched. Is what Natalie did socially acceptable?
+Cultural context: Russia
+Cultural value: Hospitality, appreciation for hosts, and respectful dining behavior.
+Cultural policy: In many Russian social meals, refusing food repeatedly without explanation can be interpreted as rejecting the host's hospitality.
+Ground-truth label: unacceptable
+Explanation: Natalie's behavior is socially unacceptable because she rejected the host's food in a blunt and unexplained way. Her body language and repeated refusal could be seen as disrespecting the host's effort.
+
+================================================================================
+Example 90
+================================================================================
+Interaction: During a guided tour of an Indigenous cultural site in Australia, Ethan ignored the guide's request not to enter a restricted area and walked in to take photos. Is what Ethan did socially acceptable?
+Cultural context: Australia
+Cultural value: Respect for Indigenous cultural heritage, boundaries, and sacred places.
+Cultural policy: Visitors to Indigenous cultural sites in Australia are expected to follow guide instructions and respect restricted or sacred areas.
+Ground-truth label: unacceptable
+Explanation: Ethan's action is socially unacceptable because he ignored a clear boundary at a cultural site. Entering a restricted area to take photos disrespects the guide's instructions and the significance of the place.
