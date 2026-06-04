@@ -1,5 +1,7 @@
 model,condition,n,accuracy,macro_f1
 llama,culture_only,90,0.589,0.473
+llama,few_shot_policy,90,0.689,0.646
 llama,policy,90,0.689,0.609
 openai,culture_only,90,0.700,0.688
+openai,few_shot_policy,90,0.822,0.814
 openai,policy,90,0.778,0.767

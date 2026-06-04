@@ -32,8 +32,8 @@ analysis_combined/
 Important final files:
 
 ```text
-results/llama_3_1_8b_instruct_90_balanced_all_conditions.jsonl
-results/gpt_4_1_mini_90_balanced_all_conditions.jsonl
+results/llama_3_1_8b_instruct_90_balanced_all_methods.jsonl
+results/gpt_4_1_mini_90_balanced_all_methods.jsonl
 analysis_combined/results_summary.md
 analysis_combined/metrics_by_condition.csv
 analysis_combined/confusion_by_condition.csv
@@ -69,13 +69,15 @@ Do not commit `.env`.
 
 ## Prompting Conditions
 
-The experiment compares two conditions:
+The experiment compares three conditions:
 
 `culture_only`: The model receives the interaction and target culture only.
 
 `policy`: The model receives the interaction, target culture, cultural value, and human-written cultural policy.
 
-Each example is evaluated independently in a stateless API call. Earlier examples and predictions are not included in later prompts.
+`few_shot_policy`: The model receives the same information as `policy`, plus three labeled in-context demonstrations: one acceptable example, one depends example, and one unacceptable example. The current test example is never used as its own demonstration.
+
+Each example is evaluated independently in a stateless API call. Earlier predictions are not included in later prompts. The few-shot examples are included only inside the prompt as demonstrations; the models are not fine-tuned.
 
 ## Reproduce Dataset
 
@@ -102,23 +104,23 @@ Preview prompts without API calls:
 python evaluate_dataset.py --model llama --condition all --limit 2 --dry-run
 ```
 
-Run the full Llama evaluation:
+Run all Llama methods:
 
 ```bash
 python evaluate_dataset.py \
   --model llama \
   --condition all \
-  --output results/llama_3_1_8b_instruct_90_balanced_all_conditions.jsonl \
+  --output results/llama_3_1_8b_instruct_90_balanced_all_methods.jsonl \
   --resume
 ```
 
-Run the full GPT-4.1 mini evaluation:
+Run all GPT-4.1 mini methods:
 
 ```bash
 python evaluate_dataset.py \
   --model openai \
   --condition all \
-  --output results/gpt_4_1_mini_90_balanced_all_conditions.jsonl \
+  --output results/gpt_4_1_mini_90_balanced_all_methods.jsonl \
   --resume
 ```
 
@@ -129,16 +131,16 @@ The evaluator writes each prediction immediately. If a run stops because of quot
 Score each model:
 
 ```bash
-python score_results.py results/llama_3_1_8b_instruct_90_balanced_all_conditions.jsonl
-python score_results.py results/gpt_4_1_mini_90_balanced_all_conditions.jsonl
+python score_results.py results/llama_3_1_8b_instruct_90_balanced_all_methods.jsonl
+python score_results.py results/gpt_4_1_mini_90_balanced_all_methods.jsonl
 ```
 
 Build combined analysis:
 
 ```bash
 mkdir -p analysis_combined
-cat results/llama_3_1_8b_instruct_90_balanced_all_conditions.jsonl \
-    results/gpt_4_1_mini_90_balanced_all_conditions.jsonl \
+cat results/llama_3_1_8b_instruct_90_balanced_all_methods.jsonl \
+    results/gpt_4_1_mini_90_balanced_all_methods.jsonl \
     > analysis_combined/combined_90_balanced_results.jsonl
 
 python analyze_results.py \
@@ -154,10 +156,12 @@ Final 90-example balanced dataset results:
 |---|---:|---:|---:|---:|
 | Llama-3.1-8B-Instruct | culture_only | 90 | 0.589 | 0.473 |
 | Llama-3.1-8B-Instruct | policy | 90 | 0.689 | 0.609 |
+| Llama-3.1-8B-Instruct | few_shot_policy | 90 | 0.689 | 0.646 |
 | GPT-4.1 mini | culture_only | 90 | 0.700 | 0.688 |
 | GPT-4.1 mini | policy | 90 | 0.778 | 0.767 |
+| GPT-4.1 mini | few_shot_policy | 90 | 0.822 | 0.814 |
 
-Main finding: policy prompting improved both models. GPT-4.1 mini performed best overall, while Llama showed a large improvement from policy prompting but struggled with the `depends` label.
+Main finding: policy prompting improved both models, and few-shot policy prompting produced the strongest overall performance. GPT-4.1 mini performed best overall, while Llama showed a large improvement from policy prompting and a macro-F1 gain from few-shot prompting. Both models still struggled most with the `depends` label.
 
 Use `analysis_combined/results_summary.md` for the final report and presentation.
 
@@ -184,4 +188,3 @@ If OpenAI returns `insufficient_quota`, your OpenAI API account or project does 
 https://platform.openai.com/account/billing/overview
 
 If Hugging Face returns HTTP 402 for Inference Providers, the included monthly credits are depleted. You can wait for the monthly reset, buy prepaid credits, subscribe to Hugging Face PRO, use a custom provider key, or run Llama locally with vLLM.
-

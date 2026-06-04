@@ -9,7 +9,65 @@ from dataset_utils import append_jsonl, load_jsonl, normalize_label
 from model_api import predict
 
 
-def build_condition_context(record: dict[str, Any], condition: str) -> str | None:
+LABEL_ORDER = ["acceptable", "depends", "unacceptable"]
+
+
+def select_few_shot_examples(
+    record: dict[str, Any],
+    records: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    examples = []
+    current_id = int(record["example_id"])
+
+    for label in LABEL_ORDER:
+        for candidate in records:
+            if int(candidate["example_id"]) == current_id:
+                continue
+            if candidate["label"] == label:
+                examples.append(candidate)
+                break
+
+    if len(examples) != len(LABEL_ORDER):
+        found = ", ".join(example["label"] for example in examples)
+        raise RuntimeError(f"Could not build balanced few-shot examples. Found: {found}")
+
+    return examples
+
+
+def format_few_shot_examples(examples: list[dict[str, Any]]) -> str:
+    lines = [
+        "Few-shot demonstrations. These examples are already labeled; do not "
+        "classify or explain them.",
+        "",
+    ]
+
+    for index, example in enumerate(examples, start=1):
+        lines.extend(
+            [
+                f"Demo {index}:",
+                f"Interaction: {example['interaction']}",
+                f"Target culture: {example['cultural_context']}",
+                f"Cultural policy: {example['cultural_policy']}",
+                f"Correct label: {example['label']}",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            "Now classify only the current interaction shown above.",
+            "Return only one JSON object with fields label and explanation.",
+            "Do not include markdown, notes, or analysis of the demonstrations.",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def build_condition_context(
+    record: dict[str, Any],
+    condition: str,
+    records: list[dict[str, Any]] | None = None,
+) -> str | None:
     culture = record["cultural_context"]
 
     if condition == "no_context":
@@ -27,6 +85,19 @@ def build_condition_context(record: dict[str, Any], condition: str) -> str | Non
             f"Cultural value: {record['cultural_value']}\n"
             f"Cultural policy: {record['cultural_policy']}"
         )
+    if condition == "few_shot_policy":
+        if records is None:
+            raise RuntimeError("few_shot_policy requires dataset records.")
+
+        few_shot_examples = select_few_shot_examples(record, records)
+        demonstrations = format_few_shot_examples(few_shot_examples)
+        return (
+            f"{demonstrations}\n\n"
+            f"Current example context:\n"
+            f"Target culture: {culture}\n"
+            f"Cultural value: {record['cultural_value']}\n"
+            f"Cultural policy: {record['cultural_policy']}"
+        )
 
     raise ValueError(f"Unknown condition: {condition}")
 
@@ -36,8 +107,9 @@ def evaluate_record(
     model_name: str,
     condition: str,
     dry_run: bool,
+    records: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
-    context = build_condition_context(record, condition)
+    context = build_condition_context(record, condition, records)
 
     result = {
         "example_id": record["example_id"],
@@ -87,7 +159,14 @@ def main() -> None:
     )
     parser.add_argument(
         "--condition",
-        choices=["no_context", "culture_only", "value_only", "policy", "all"],
+        choices=[
+            "no_context",
+            "culture_only",
+            "value_only",
+            "policy",
+            "few_shot_policy",
+            "all",
+        ],
         default="culture_only",
     )
     parser.add_argument("--limit", type=int, default=None)
@@ -105,13 +184,14 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    records = load_jsonl(args.input)
+    all_records = load_jsonl(args.input)
+    records = all_records
     if args.limit is not None:
         records = records[: args.limit]
 
     models = ["openai", "llama"] if args.model == "both" else [args.model]
     conditions = (
-        ["culture_only", "policy"]
+        ["culture_only", "policy", "few_shot_policy"]
         if args.condition == "all"
         else [args.condition]
     )
@@ -154,7 +234,13 @@ def main() -> None:
             f"example {record['example_id']}"
         )
         try:
-            output_record = evaluate_record(record, model_name, condition, args.dry_run)
+            output_record = evaluate_record(
+                record,
+                model_name,
+                condition,
+                args.dry_run,
+                all_records,
+            )
         except RuntimeError as exc:
             print(f"Stopped before writing this record: {exc}")
             print(f"Completed predictions are saved in {output_path}")

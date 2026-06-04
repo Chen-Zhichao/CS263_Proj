@@ -40,10 +40,50 @@ def _parse_json_object(text: str) -> dict[str, Any]:
     try:
         return json.loads(cleaned)
     except json.JSONDecodeError:
+        pass
+
+    for match in reversed(list(re.finditer(r"\{.*?\}", cleaned, re.DOTALL))):
+        try:
+            parsed = json.loads(match.group(0))
+        except json.JSONDecodeError:
+            continue
+        if "label" in parsed:
+            return parsed
+
+    label_patterns = [
+        r'"label"\s*:\s*"(acceptable|unacceptable|depends)"',
+        r"\bLabel\s*:\s*(acceptable|unacceptable|depends)\b",
+    ]
+    for pattern in label_patterns:
+        matches = re.findall(pattern, cleaned, flags=re.IGNORECASE)
+        if matches:
+            return {
+                "label": matches[-1].lower(),
+                "explanation": cleaned,
+            }
+
+    tail = cleaned.lower().split("current interaction")[-1]
+    tail = tail.split("current example")[-1]
+    phrase_patterns = [
+        (r"\b(unacceptable)\b", "unacceptable"),
+        (r"\b(depends)\b", "depends"),
+        (r"\b(acceptable)\b", "acceptable"),
+    ]
+    last_match: tuple[int, str] | None = None
+    for pattern, label in phrase_patterns:
+        for match in re.finditer(pattern, tail):
+            if last_match is None or match.start() > last_match[0]:
+                last_match = (match.start(), label)
+    if last_match:
         return {
-            "label": "parse_error",
+            "label": last_match[1],
             "explanation": cleaned,
         }
+
+    return {
+        "label": "parse_error",
+        "explanation": cleaned,
+    }
 
 
 def call_gpt41_mini(interaction: str, culture_context: str | None = None) -> dict[str, Any]:

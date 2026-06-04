@@ -73,26 +73,32 @@ def write_changed_predictions(records: list[dict], output_dir: Path) -> None:
     rows = []
     for (model, example_id), conditions in sorted(by_example.items()):
         baseline = conditions.get("culture_only")
-        policy = conditions.get("policy")
-        if not baseline or not policy:
-            continue
-        if baseline["predicted_label"] == policy["predicted_label"]:
+        if not baseline:
             continue
 
-        rows.append(
-            {
-                "model": model,
-                "example_id": example_id,
-                "culture": policy["culture"],
-                "gold_label": policy["gold_label"],
-                "culture_only_prediction": baseline["predicted_label"],
-                "policy_prediction": policy["predicted_label"],
-                "policy_helped": (not baseline["correct"]) and policy["correct"],
-                "policy_hurt": baseline["correct"] and (not policy["correct"]),
-                "interaction": policy["interaction"],
-                "policy_explanation": policy["prediction"].get("explanation", ""),
-            }
-        )
+        for condition, comparison in sorted(conditions.items()):
+            if condition == "culture_only":
+                continue
+            if baseline["predicted_label"] == comparison["predicted_label"]:
+                continue
+
+            rows.append(
+                {
+                    "model": model,
+                    "example_id": example_id,
+                    "culture": comparison["culture"],
+                    "gold_label": comparison["gold_label"],
+                    "comparison_condition": condition,
+                    "culture_only_prediction": baseline["predicted_label"],
+                    "comparison_prediction": comparison["predicted_label"],
+                    "comparison_helped": (not baseline["correct"]) and comparison["correct"],
+                    "comparison_hurt": baseline["correct"] and (not comparison["correct"]),
+                    "interaction": comparison["interaction"],
+                    "comparison_explanation": comparison["prediction"].get(
+                        "explanation", ""
+                    ),
+                }
+            )
 
     path = output_dir / "changed_predictions.csv"
     with path.open("w", newline="", encoding="utf-8") as handle:
@@ -101,12 +107,13 @@ def write_changed_predictions(records: list[dict], output_dir: Path) -> None:
             "example_id",
             "culture",
             "gold_label",
+            "comparison_condition",
             "culture_only_prediction",
-            "policy_prediction",
-            "policy_helped",
-            "policy_hurt",
+            "comparison_prediction",
+            "comparison_helped",
+            "comparison_hurt",
             "interaction",
-            "policy_explanation",
+            "comparison_explanation",
         ]
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
@@ -147,4 +154,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
