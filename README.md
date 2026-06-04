@@ -165,21 +165,6 @@ Main finding: policy prompting improved both models, and few-shot policy prompti
 
 Use `analysis_combined/results_summary.md` for the final report and presentation.
 
-## Push Changes
-
-After editing code, commit and push with:
-
-```bash
-./push_changes.sh "Describe what changed"
-```
-
-Example:
-
-```bash
-./push_changes.sh "Finalize 90-example evaluation"
-```
-
-The script checks that `.env` is ignored before committing anything.
 
 ## Troubleshooting
 
